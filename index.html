@@ -267,6 +267,7 @@ a { color: inherit; text-decoration: none; }
 /* ── ABOUT ────────────────────────────────────────── */
 .about-card {
   max-width: 680px;
+  margin: 0 auto;
   background: var(--white);
   border: 1.5px solid var(--rule);
   border-radius: 12px;
@@ -291,7 +292,35 @@ a { color: inherit; text-decoration: none; }
 .footer__links a:hover { color: var(--sky); }
 .footer__copy { font-size: var(--text-xs); color: rgba(255,255,255,0.18); }
 
-/* ── REVEAL ───────────────────────────────────────── */
+/* ── PLAY BUTTON TOOLTIP ──────────────────────────── */
+.play-btn { position: relative; }
+.play-btn__tip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--indigo);
+  color: var(--white);
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 10;
+}
+.play-btn__tip::after {
+  content: '';
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--indigo);
+}
+.play-btn.tip-visible .play-btn__tip { display: block; }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.in { opacity: 1; transform: none; }
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}
@@ -362,7 +391,7 @@ a { color: inherit; text-decoration: none; }
 <div class="wrap">
   <div class="s-header">
     <h2 class="fd s-title">the <em>radio</em></h2>
-    <span class="s-meta">weekend radio · fri noon – mon noon</span>
+    <span class="s-meta">weekend radio · friday through monday</span>
   </div>
   <div class="radio-player reveal">
     <div>
@@ -374,7 +403,8 @@ a { color: inherit; text-decoration: none; }
       <div class="waveform">
         <div class="waveform__bar"></div><div class="waveform__bar"></div><div class="waveform__bar"></div><div class="waveform__bar"></div><div class="waveform__bar"></div><div class="waveform__bar"></div><div class="waveform__bar"></div>
       </div>
-      <button class="play-btn" aria-label="play sunshinefm">
+      <button class="play-btn" aria-label="play sunshinefm" id="play-btn">
+        <span class="play-btn__tip">coming soon</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="#1C1C1A"><path d="M8 5v14l11-7z"/></svg>
       </button>
     </div>
@@ -567,6 +597,15 @@ a { color: inherit; text-decoration: none; }
     });
   });
 
+  // ── Play button: coming soon tooltip ──
+  const playBtn = document.getElementById('play-btn');
+  if (playBtn) {
+    playBtn.addEventListener('click', () => {
+      playBtn.classList.add('tip-visible');
+      setTimeout(() => playBtn.classList.remove('tip-visible'), 2500);
+    });
+  }
+
   // ── Human Rhythm Engine: live state detection ──
   // All times are PT (UTC-8 standard / UTC-7 daylight)
   // States: rise 5-8, flow 8-12, lift 12-17, gather 17-21, drift 21-5
@@ -619,7 +658,7 @@ a { color: inherit; text-decoration: none; }
       stateText.innerHTML = s.desc + '<br>weekend radio · check in friday noon · check out monday noon · ai-generated music, always';
       liveLabel.textContent = 'on air';
     } else {
-      stateText.innerHTML = s.desc + '<br>weekend radio launches friday noon · check out monday noon · full 7-day programming coming soon';
+      stateText.innerHTML = s.desc + '<br>check-in fridays at noon · check-out monday at noon · full 7-day ai-generated music coming soon';
       liveLabel.textContent = 'weekends';
     }
 

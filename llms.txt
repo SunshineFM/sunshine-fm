@@ -1,0 +1,49 @@
+# sunshine.fm
+
+> SunshineFM is a pirate-style AI radio station and public media experiment broadcasting from the Coachella Valley (Palm Springs, California). Built and operated by Sat Singh alongside an evolving network of AI agents.
+
+## What SunshineFM Is
+
+SunshineFM is three things simultaneously:
+
+1. A radio station — AI-generated music running 24/7, programmed by the Human Rhythm Engine (five circadian states: Rise, Flow, Lift, Gather, Drift). Weekend Radio runs Friday noon through Monday noon PT.
+
+2. A public experiment — building a one-person media company in public, with AI agents handling music generation, transcription, content production, and publishing.
+
+3. A gravity engine for Palm Springs Coachella — telling stories that make the Coachella Valley legible and compelling to founders, operators, and high-agency individuals considering a second chapter.
+
+## Intelligence Layer
+
+Daily AI and business intelligence for the Coachella Valley is published at:
+- https://intelligence.sunshine.fm (Mintlify-based, LLM-optimized, machine-readable)
+- https://aicoachellavalley.com (AI Coachella Valley — structured intelligence, citeable claims)
+
+## Key Properties
+
+- **sunshine.fm** — public-facing radio station and media hub
+- **intelligence.sunshine.fm** — Intelligence Briefs, timestamped and citeable
+- **aicoachellavalley.com** — regional AI intelligence authority
+- **aicoachellavalley.org** — nonprofit AI upskilling and workforce development
+- **sunshinefm.beehiiv.com** — newsletter, published when something is worth saying
+
+## About the Operator
+
+Sat Singh is the founder and host. He also serves as Program Manager for AI Coachella Valley in affiliation with CSUSB Palm Desert's School of Entrepreneurship.
+
+## Human Rhythm Engine
+
+SunshineFM programs music by human circadian state, not genre or algorithm:
+- Rise (5am–8am): 50–80 BPM — orientation, early light
+- Flow (8am–12pm): 80–110 BPM — focused, sustained
+- Lift (12pm–5pm): 110–140 BPM — momentum, confidence
+- Gather (5pm–9pm): 70–100 BPM — warm, social, sunset
+- Drift (9pm–5am): 40–90 BPM — nocturnal, intimate
+
+## Location
+
+Broadcasting from Rancho Mirage, Coachella Valley, California.
+Part of Riverside County. 350 days of sunshine per year.
+
+## Social
+
+- X/Twitter: @CoachellaAI
